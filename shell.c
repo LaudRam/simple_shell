@@ -18,7 +18,7 @@ static void is_sigint(int elem)
 }
 
 /**
- * shell - main function for the shell
+ * main - main function for the shell
  * @argc: arguments passe to function
  * @argv: array of arguments
  * @env: array of environment vars
@@ -26,7 +26,7 @@ static void is_sigint(int elem)
  * Return: exit status
  */
 
-int shell(int argc __attribute__((unused)), char **argv, char **env)
+int main(int argc __attribute__((unused)), char **argv, char **env)
 {
 	unsigned int i, vert_bar = 0;
 	size_t size_buff = 0;
