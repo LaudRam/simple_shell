@@ -1,5 +1,6 @@
 #include "shell.h"
 
+unsigned int sig;
 
 /**
  * is_sigint - handles interrupt signal raised when Ctrl+C is pressed
@@ -9,7 +10,6 @@
 static void is_sigint(int elem)
 {
 	(void) elem;
-	int sig;
 
 	if (sig == 0)
 		_puts("\n$ ");
@@ -46,7 +46,7 @@ int shell(int argc __attribute__((unused)), char **argv, char **env)
 		variables.amnt++;
 		variables.comms = tokenise(variables.buff, ";");
 
-		for (i = 0; variables.comms && variables.comms[i], != NULL; i++)
+		for (i = 0; variables.comms && variables.comms[i] != NULL; i++)
 		{
 			variables.av = tokenise(variables.comms[i], "\n \t\r");
 
