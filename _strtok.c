@@ -54,7 +54,7 @@ char *_strtok(char *s, const char *delim)
 	token_begin = token_next + i;
 	token_next = token_begin;
 
-	for (i = 0, token_next[i] != '\0'; i++)
+	for (i = 0; token_next[i] != '\0'; i++)
 	{
 		if (is_match(token_next[i], delim) == 1)
 			break;
