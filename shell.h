@@ -95,6 +95,6 @@ char **tokenise(char *buff, char *delim);
 
 /*========== main function ==========*/
 
-int main(int argc __attribute__((unused)), char **argv, char **env);
+int main(int argc __attribute__((unused)), char **argv, char **enviro);
 
 #endif
