@@ -82,9 +82,9 @@ int run_comm(vars_t *variables);
 
 /*========== strman ==========*/
 
-int comp_string(char *s1, char *s2);
-char *dup_string(char *s);
-char *join_string(char *s1, char *s2);
+int comp_string(char *s_c1, char *s_c2);
+char *dup_string(char *s_dup);
+char *join_string(char *s_j1, char *s_j2);
 unsigned int len_string(char *s);
 ssize_t _puts(char *s);
 

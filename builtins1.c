@@ -65,7 +65,8 @@ void add_new_env(vars_t *variables)
 		free(variables->buff);
 		free(variables->av);
 		free(variables->comms);
-		free_env(new);
+		free_env(variables->env);
+		free(new);
 		exit(127);
 	}
 

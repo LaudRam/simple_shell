@@ -2,78 +2,78 @@
 
 /**
  * comp_string - compares two strings
- * @s1: first string
- * @s2: second string
+ * @s_c1: first string to compare
+ * @s_c2: second string to compare
  *
  * Return: 0 on success
  */
 
-int comp_string(char *s1, char *s2)
+int comp_string(char *s_c1, char *s_c2)
 {
 	int i = 0;
 
-	while (s1[i] == s2[i])
+	while (s_c1[i] == s_c2[i])
 	{
-		if (s1[i] == '\0')
+		if (s_c1[i] == '\0')
 			return (0);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (s_c1[i] - s_c2[i]);
 }
 
 /**
  * dup_string - duplicates a string
- * @s: string to be duplicated
+ * @s_dup: string to be duplicated
  *
  * Return: pointer to new duplicated string
  */
 
-char *dup_string(char *s)
+char *dup_string(char *s_dup)
 {
 	char *dup;
 	int i, size;
 
-	if (s == 0)
+	if (s_dup == 0)
 		return (NULL);
 
-	for (size = 0; s[size]; size++)
+	for (size = 0; s_dup[size]; size++)
 		;
 
 	dup = malloc((size + 1) * sizeof(char));
 
 	for (i = 0; i <= size; size++)
-		dup[i] = s[i];
+		dup[i] = s_dup[i];
 
 	return (dup);
 }
 
 /**
  * join_string - joins two strings
- * @s1: first string
- * @s2: second string
+ * @s_j1: first string
+ * @s_j2: second string
  *
  * Return: new string
  */
 
-char *join_string(char *s1, char *s2)
+char *join_string(char *s_j1, char *s_j2)
 {
 	unsigned int i, j, len1 = 0, len2 = 0, new_len;
 	char *new_str;
 
-	if (s1 == NULL)
+	if (s_j1 == NULL)
 		len1 = 0;
 
 	else
 	{
-		for (len1 = 0; s1[len1]; len1++)
+		for (len1 = 0; s_j1[len1]; len1++)
 			;
 	}
 
-	if (s2 == NULL)
+	if (s_j2 == NULL)
 		len2 = 0;
 	else
 	{
-		for (len2 = 0; s2[len2]; len2++)
+		for (len2 = 0; s_j2[len2]; len2++)
 			;
 	}
 	new_len = len1 + len2 + 2;
@@ -82,10 +82,10 @@ char *join_string(char *s1, char *s2)
 	if (new_str == NULL)
 		return (NULL);
 	for (i = 0; i < len1; i++)
-		new_str[i] = s1[i];
+		new_str[i] = s_j1[i];
 	new_str[i] = '/';
 	for (j = 0; j < len2; j++)
-		new_str[i + j + 1] = s2[j];
+		new_str[i + j + 1] = s_j2[j];
 	new_str[len1 + len2 + 1] = '\0';
 
 	return (new_str);

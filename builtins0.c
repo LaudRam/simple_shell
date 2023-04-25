@@ -80,7 +80,7 @@ void new_env(vars_t *variables)
 			free(variables->buff);
 			free(variables->comms);
 			free(variables->av);
-			free(variables->env);
+			free_env(variables->env);
 			exit(127);
 		}
 		free(*cue);

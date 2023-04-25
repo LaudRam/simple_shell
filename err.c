@@ -60,13 +60,13 @@ void err_puts(char *s)
 
 void is_error(vars_t *variables, char *txt)
 {
-	char *amount;
+	char *amnt;
 
 	err_puts(variables->argv[0]);
 	err_puts(": ");
-	amount = uint_to_str(variables->amnt);
-	err_puts(amount);
-	free(amount);
+	amnt = uint_to_str(variables->amnt);
+	err_puts(amnt);
+	free(amnt);
 	err_puts(": ");
 	err_puts(variables->av[0]);
 
