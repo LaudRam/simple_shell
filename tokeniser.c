@@ -28,7 +28,7 @@ char **tokenise(char *buff, char *delim)
 		x++;
 		if (x == counter)
 		{
-			tokens = arr_realloc(tokens, counter);
+			tokens = arr_realloc(tokens, &counter);
 
 			if (tokens == NULL)
 			{
@@ -36,7 +36,7 @@ char **tokenise(char *buff, char *delim)
 				return (NULL);
 			}
 		}
-		buff == NULL;
+		buff = NULL;
 	}
 	return (tokens);
 }

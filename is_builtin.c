@@ -12,11 +12,11 @@ void (*is_builtin(vars_t *variables))(vars_t *variables)
 	unsigned int i;
 
 	builtins_t look[] = {
-		{"unsetenv", del_env};
-		{"setenv", new_env};
-		{"env", print_env};
-		{"exit", mod_exit};
-		{NULL, NULL};
+		{"unsetenv", del_env},
+		{"setenv", new_env},
+		{"env", print_env},
+		{"exit", mod_exit},
+		{NULL, NULL}
 	};
 
 	for (i = 0; look[i].func != NULL; i++)

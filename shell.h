@@ -11,17 +11,7 @@
 #include <limits.h>
 #include <signal.h>
 
-/**
- * struct builtins - structure for builtins
- * @tag: name of builtin command
- * @func: function for corresponding builtin
- */
-
-typedef struct builtins
-{
-	char *tag;
-	void (*func)(vars_t *);
-} builtins_t;
+/*========== Structures ==========*/
 
 /**
  * struct variables - structure for variables
@@ -44,6 +34,18 @@ typedef struct variables
 	char **argv;
 	size_t amnt;
 } vars_t;
+
+/**
+ * struct builtins - structure for builtins
+ * @tag: name of builtin command
+ * @func: function for corresponding builtin
+ */
+
+typedef struct builtins
+{
+	char *tag;
+	void (*func)(vars_t *);
+} builtins_t;
 
 /*========== _strtok ==========*/
 
@@ -88,12 +90,11 @@ ssize_t _puts(char *s);
 
 /*========== memory and tokeniser ==========*/
 
-char **arr_realloc(char **pointer, size_t *amnt);
+char **arr_realloc(char **pointer, size_t *size);
 char **tokenise(char *buff, char *delim);
 
-/*========== main shell ==========*/
+/*========== main function ==========*/
 
-static void is_sigint(int elem);
-int shell(int argc __attribute__((unused)), char **argv, char **env);
+int main(int argc __attribute__((unused)), char **argv, char **env);
 
 #endif

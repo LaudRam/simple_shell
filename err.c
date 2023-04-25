@@ -64,7 +64,7 @@ void is_error(vars_t *variables, char *txt)
 
 	err_puts(variables->argv[0]);
 	err_puts(": ");
-	amount = unint_to_str(variables->amount);
+	amount = uint_to_str(variables->amnt);
 	err_puts(amount);
 	free(amount);
 	err_puts(": ");
