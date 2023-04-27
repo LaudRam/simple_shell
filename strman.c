@@ -41,7 +41,7 @@ char *dup_string(char *s_dup)
 
 	dup = malloc((size + 1) * sizeof(char));
 
-	for (i = 0; i <= size; size++)
+	for (i = 0; i <= size; i++)
 		dup[i] = s_dup[i];
 
 	return (dup);
